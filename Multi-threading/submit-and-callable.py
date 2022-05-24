@@ -1,4 +1,4 @@
-from concurrent.futures import ThreadPoolExecutor, as_completed, Future
+from concurrent.futures import ThreadPoolExecutor, Future
 from msvcrt import getwche
 import sys
 from random import random
@@ -8,6 +8,8 @@ from time import sleep
 
 # Module global variables...
 MAX_WAIT = 3
+# Using a Lock object as a means of synchronization to avoid
+# interference when printing
 printLock = Lock()
 
 
