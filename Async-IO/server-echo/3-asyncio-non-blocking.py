@@ -1,10 +1,5 @@
-# This script acts as a server and accepts connections from other
-# sockets on the network and read their sending data.
-# Keywords:
-# signal, socket, dataclass, namedtuple, asyncio
-
 import asyncio
-from collections import namedtuple
+from collections import deque, namedtuple
 from dataclasses import dataclass
 import os
 import signal
@@ -25,6 +20,7 @@ class ConnectionInfo:
 
 
 # Defining global variables...
+loop = None
 toQuit: bool = False
 connections: dict[Host, ConnectionInfo] = {}
 
@@ -55,47 +51,54 @@ async def ShowStatus() -> None:
         print('No connection')
 
 
-async def ListenForConnection() -> None:
+async def ReadData(sock: socket.socket) -> None:
     global connections
+    global loop
 
+    sock.setblocking(False)
+    sock.settimeout(0.1)
     try:
-        clientSoc, host = serverSoc.accept()
-        connections[host] = ConnectionInfo(
-            socket=clientSoc,
-            data=bytes())
-        await ReadSocket(host)
-    except BlockingIOError:
-        await asyncio.sleep(0.1)
-
-
-async def ReadSocket(host: Host) -> None:
-    global connections
-
-    connections[host].socket.setblocking(False)
-    while True:
-        dataPart = None
-        try:
-            dataPart = connections[host].socket.recv(1024)
-        except socket.error:
-            break
-        if not dataPart:
-            break
-        connections[host].data = connections[host].data + dataPart
+        q = deque()
+        while True:
+            try:
+                dataPart = await loop.sock_recv(sock, 1024)
+                if not dataPart:
+                    break
+                q.append(dataPart)
+            except socket.error:
+                break
+        connections[sock.getpeername()].data = b''.join(q)
+    finally:
+        sock.close()
 
 
 async def CheckConnections() -> None:
     global connections
+    global serverSock
 
-    for key in connections:
-        if not connections[key].socket:
+    # Creating a shallow copy...
+    conns = {**connections}
+
+    for key in conns:
+        try:
+            serverSock.connect(key)
+        except Exception:
             del connections[key]
 
 
 async def main() -> None:
+    global loop
+    global serverSock
+    global connections
+
+    loop = asyncio.get_running_loop()
     while not toQuit:
         await ShowStatus()
-        await ListenForConnection()
-        await CheckConnections()
+        clientSock, clientHost = await loop.sock_accept(serverSock)
+        connections[clientHost] = ConnectionInfo(
+            clientSock,
+            bytes())
+        await ReadData(clientSock)
 
 
 if __name__ == '__main__':
@@ -106,14 +109,15 @@ if __name__ == '__main__':
 
     # Configuring the server socket...
     # Setting family address to IPv4 & protocol to TCP...
-    serverSoc = socket.socket(
+    serverSock = socket.socket(
         socket.AF_INET,
         socket.SOCK_STREAM)
     # Using non-blocking socket...
-    serverSoc.setblocking(False)
+    serverSock.setblocking(False)
+    serverSock.settimeout(0.1)
     # Binding IP and port to the socket...
-    serverSoc.bind(('127.0.0.1', 8008,))
+    serverSock.bind(('127.0.0.1', 8008,))
     # Accepting up to 200 connections...
-    serverSoc.listen(200)
+    serverSock.listen(200)
 
     asyncio.run(main())
