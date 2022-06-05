@@ -20,7 +20,7 @@ async def GetStatus(
         session: ClientSession,
         url: str,
         num: int
-        ) -> int:
+        ) -> tuple[int, int]:
     await asyncio.sleep(5 * random())
     async with session.get(url) as resp:
         return num, resp.status
