@@ -1,3 +1,6 @@
+# Running some tasks in separate processes and getiing their results
+# as soon as each process finishes.
+
 from concurrent.futures import ProcessPoolExecutor, as_completed
 from datetime import timedelta
 from functools import partial
@@ -15,17 +18,14 @@ def CountTo(num: int) -> str:
 
 
 if __name__ == '__main__':
+    COUNTS = [
+        100_000,
+        1_000_000,
+        1_000,]
     with ProcessPoolExecutor(max_workers=6) as executor:
-        COUNTS = [
-            100_000,
-            1_000_000,
-            1_000,]
-        countFutures = executor.map(
-            CountTo,
-            COUNTS)
-        '''countFutures = [
+        countFutures = [
             executor.submit(CountTo, n)
-            for n in COUNTS]'''
+            for n in COUNTS]
 
         for future in as_completed(countFutures):
             if future.cancelled():
