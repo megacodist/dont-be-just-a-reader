@@ -1,6 +1,14 @@
 # If we have some CPU-bound tasks to perform and the results of these
 # tasks can be combined out of order, we can do it with the following
-# procedurr.
+# procedure.
+#
+# Pay special attention to max_worker parameter of ProcessPoolExecutor.
+# If you do not specify this parameter, the default is the number of cores
+# of your CPU or the number of threads of your CPU if your CPU supports
+# Intel® Hyperthreading or AMD® Simultaneous Multithreading or any similar
+# technology. This is good when some CPU-bound tasks must be done and
+# switching between them does not provide any benefit. Instead the overhead
+# of context switch might increase the total time.
 
 from concurrent.futures import ProcessPoolExecutor, wait
 from random import random
@@ -30,14 +38,14 @@ def main(n: int):
             for _ in range(n)]
         
         # Combining results out of order...
-        reserved = None
+        leftover = None
         while pending:
             done, pending = wait(
                 pending,
                 timeout=0.1)
-            if reserved:
-                done.add(reserved)
-                reserved = None
+            if leftover:
+                done.add(leftover)
+                leftover = None
             while len(done) >= 2:
                 pending.add(
                     pPool.submit(
@@ -45,9 +53,9 @@ def main(n: int):
                         done.pop().result(),
                         done.pop().result()))
             if done:
-                reserved = done.pop()
+                leftover = done.pop()
         
-        print(reserved.result())
+        print(leftover.result())
 
 
 if __name__ == '__main__':

@@ -1,6 +1,4 @@
 from enum import IntFlag
-import logging
-import sys
 from typing import Generator
 
 
@@ -22,16 +20,22 @@ def Partition(
 
     start = 0
     while True:
-        end = start + chunckSize
+        # Stripping leading white spaces from the start of this chunck...
         try:
-            if end == len(text):
-                return text[start:]
-            elif text[end] in WHITE_SPACES:
-                yield text[start:end]
-                start = end
-                continue
+            while text[start] in WHITE_SPACES:
+                start += 1
         except IndexError:
-            return text[start:]
+            yield ''
+            return
+
+        end = start + chunckSize
+        if end >= len(text):
+            yield text[start:]
+            return
+        elif text[end] in WHITE_SPACES:
+            yield text[start:end]
+            start = end
+            continue
         
         spaces = _LRSpaces.NO_SPACE
         # Finding the nearest space on the left...
@@ -39,9 +43,9 @@ def Partition(
             lSpace = GetFirstIndexRTL(
                 text,
                 WHITE_SPACES,
-                end,
-                start)
-            spaces |= _LRSpaces.L_SPACE
+                start,
+                end)
+            spaces = spaces | _LRSpaces.L_SPACE
         except ValueError:
             pass
         
@@ -51,15 +55,16 @@ def Partition(
                 text,
                 WHITE_SPACES,
                 end)
-            spaces |= _LRSpaces.R_SPACE
+            spaces = spaces | _LRSpaces.R_SPACE
         except ValueError:
             pass
 
         match spaces:
             case 0:
                 # No white space was found around the end of this chunck
-                logging.error('No white space found')
-                sys.exit('No white space found')
+                # Returning the rest of text
+                yield text[start:]
+                return
             case 1:
                 # Found a white space only on the left of the end of
                 # this chunck
@@ -83,22 +88,23 @@ def Partition(
 
 def CountWords(text: str) -> dict[str, int]:
     from collections import defaultdict
-    from re import finditer
+    from re import compile, IGNORECASE
 
-    words: dict[str, int] = defaultdict(int)
-    for match in finditer(r'\b\w+\b', text):
-        words[match.string] += 1
-    return words
+    wordsCount: dict[str, int] = defaultdict(int)
+    pattern = compile(r'\b\w+\b', IGNORECASE)
+    for match in pattern.finditer(text):
+        wordsCount[match[0].lower()] += 1
+    return wordsCount
 
 
 def MergeResults(
         a: dict[str, int],
         b: dict[str, int]
         ) -> dict[str, int]:
-    result_ = {**a}
+    merge = {**a}
     for word, count in b.items():
         try:
-            result_[word] += count
+            merge[word] += count
         except KeyError:
-            result_[word] = count
-    return result_
+            merge[word] = count
+    return merge
