@@ -1,49 +1,44 @@
 import asyncio
+from concurrent.futures import Future
+from datetime import timedelta
 import logging
+from queue import Empty, Queue
 import sys
 from threading import Lock, Thread
+from time import perf_counter
 import tkinter as tk
 from tkinter import ttk
-from typing import Any, Callable, Iterable, Mapping
+from typing import Any, Callable, Iterable, Mapping, Optional
 
 import aiohttp
 import attrs
 
 
-# Defining of demanding types...
+# Defining og demanding types...
 @attrs.define
 class ProgInfo:
     nFinished: int
     total: int
 
 
-# Defining of required variables...
-progInfo: ProgInfo
-progInfoLock = Lock()
-
-
-async def DoStressTest(url: str, n: int) -> None:
-    global progInfo
-    global progInfoLock
-
-    with progInfoLock:
-        progInfo = ProgInfo(0, n)
-    async with aiohttp.ClientSession() as session:
-        reqs =[
-            session.get(url)
-            for _ in range(n)]
-        for future in asyncio.as_completed(reqs):
-            try:
-                await future
-            except Exception:
-                pass
-            with progInfoLock:
-                progInfo.nFinished += 1
-
-
-class AsyncioThrd(Thread):
-    def __init__(self, *args, **kwargs) -> None:
-        super().__init__(*args, **kwargs)
+class HttpStressTest(Thread):
+    def __init__(
+            self,
+            group: None = None,
+            target: Callable[..., Any] | None = None,
+            name: str | None = None,
+            args: Iterable[Any] = (),
+            kwargs: Mapping[str, Any] | None = {},
+            *,
+            daemon: bool | None = None
+            ) -> None:
+        super().__init__(
+            group,
+            target,
+            name,
+            args,
+            kwargs,
+            daemon=daemon)
 
         self._running = True
         self._TIME_INTRVL = 0.1
@@ -56,26 +51,97 @@ class AsyncioThrd(Thread):
                 asyncio.set_event_loop_policy(
                     asyncio.WindowsSelectorEventLoopPolicy())
 
-        try:
-            # Running the application...
-            self.loop = asyncio.new_event_loop()
-            asyncio.set_event_loop(self.loop)
-            self.loop.run_until_complete(self._main())
-        finally:
-            self.loop.close()
+        while self._running:
+            try:
+                # Setting up the asyncio event loop...
+                self.loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(self.loop)
+                self.loop.run_forever()
+            # Catching asyncio-related errors here...
+            finally:
+                self.loop.close()
 
     def close(self) -> None:
+        # Because we definitely call this method from a thread other than
+        # the thread initiated by run method, we call
+        # self.loop.call_soon_threadsafe(self.loop.stop). But if we were
+        # on the same thread, we must have called self.loop.stop()
         self._running = False
+        self.loop.call_soon_threadsafe(self.loop.stop)
     
-    async def _main(self) -> None:
-        while self._running:
-            await asyncio.sleep(self._TIME_INTRVL)
-        
-        pending = asyncio.all_tasks()
-        while len(pending) > 1:
-            _, pending = asyncio.wait(
-                pending,
-                timeout=self._TIME_INTRVL)
+    def Test(
+            self,
+            url: str,
+            num: int,
+            callback: Optional[Callable[[int, int], None]] = None
+            ) -> Future[timedelta]:
+        """Initiates a new HTTP stress test by sending GET request to the
+        'url' by the number of 'num'. The optional parameter of callback
+        informs the progress of the test. It returns a concurrent.futures.
+        Fututre object which can be used to obtain the duration of the 
+        operation, cancel it, and accessing other Future APIs.
+
+        Raises asyncio.InvalidStateError if there is an ongoing stress test.
+        """
+        if asyncio.all_tasks(self.loop):
+            raise asyncio.InvalidStateError()
+
+        return asyncio.run_coroutine_threadsafe(
+            self._Test(
+                url,
+                num,
+                callback),
+            self.loop)
+    
+    async def _Test(
+            self,
+            url: str,
+            num: int,
+            callback: Optional[Callable[[int, int], None]] = None
+            ) -> Future[timedelta]:
+        global progInfo
+        global progInfoLock
+
+        # Initializing the start of the operation...
+        try:
+            nFinished = 0
+            if callback:
+                callback(nFinished, num)
+            
+            startTime = perf_counter()
+            async with aiohttp.ClientSession() as session:
+                reqs = [
+                    asyncio.create_task(
+                        session.get(url))
+                    for _ in range(num)]
+                for future in asyncio.as_completed(reqs):
+                    try:
+                        await future
+                    except Exception:
+                        pass
+                    nFinished += 1
+                    if callback:
+                        callback(nFinished, num)
+            finishedTime = perf_counter()
+
+            return timedelta(seconds=(finishedTime - startTime))
+        except asyncio.CancelledError:
+            # Cancelling the issued get requests...
+            for task in asyncio.all_tasks():
+                task.cancel()
+            # Re-throwing the CancelledError...
+            raise
+    
+    def Cancel(self) -> None:
+        """Cancels the ongoing test. It does nothing if there is not any."""
+        asyncio.run_coroutine_threadsafe(
+            self._Cancel(),
+            self.loop)
+    
+    async def _Cancel(self) -> None:
+        allTasks = asyncio.all_tasks()
+        for task in allTasks:
+            task.cancel()
 
 
 class HttpStressTestWin(tk.Tk):
@@ -95,6 +161,7 @@ class HttpStressTestWin(tk.Tk):
         self.resizable(True, False)
 
         self._TIME_INTRVL = 40
+        self._queue = Queue()
         self._showProgID: int
         self._updateElapsedID: int
 
@@ -213,19 +280,18 @@ class HttpStressTestWin(tk.Tk):
         self._StartStopTest()
     
     def _StartStopTest(self) -> None:
-        global asyncioThrd
-        global progInfo
+        global HttpstressTest
 
         if self.btn_startStop['text'] == 'Start':
             nReqs = int(self.spn_number.get())
             self.prgrs_status.config(maximum=nReqs)
             self.btn_startStop.config(text='Stop')
             self.lbl_status.config(text='Starting test...')
-            self._testTask = asyncio.run_coroutine_threadsafe(
-                DoStressTest(
-                    self.entry_url.get(),
-                    nReqs),
-                asyncioThrd.loop)
+
+            self._stressTest = HttpstressTest.Test(
+                self.entry_url.get(),
+                nReqs,
+                self.ReportProg)
             self._showProgID = self.after(
                 self._TIME_INTRVL,
                 self._ShowProg)
@@ -234,34 +300,44 @@ class HttpStressTestWin(tk.Tk):
                 self._UpdateElapsed,
                 1)
         elif self.btn_startStop['text'] == 'Stop':
-            self._testTask.cancel()
-            if self._showProgID:
-                self.after_cancel(self._showProgID)
-            if self._updateElapsedID:
-                self.after_cancel(self._updateElapsedID)
-            if self._testTask.cancelled():
-                self._ResetStatus()
-            else:
-                self.after(
-                    self._TIME_INTRVL,
-                    self._CheckCanceling)
+            HttpstressTest.Cancel()
+            self.after(
+                self._TIME_INTRVL,
+                self._CheckCanceling)
         else:
             logging.warning('Button text is incorrect')
+    
+    def ReportProg(
+            self,
+            nFinished: int,
+            num: int
+            ) -> None:
+        self._queue.put(ProgInfo(nFinished, num))
     
     def _ShowProg(self) -> None:
         global progInfo
         global progInfoLock
 
-        with progInfoLock:
-            currProg = progInfo
-        if currProg.nFinished < currProg.total:
+        try:
+            currProg = None
+            while True:
+                currProg = self._queue.get(timeout=0.01)
+        except Empty:
+            pass
+        if currProg is None:
+            # Waiting & scheduling for progress info...
+            self._showProgID = self.after(
+                self._TIME_INTRVL,
+                self._ShowProg)
+        elif currProg.nFinished < currProg.total:
             self.prgrs_status['value'] = currProg.nFinished
             self._showProgID = self.after(
                 self._TIME_INTRVL,
                 self._ShowProg)
         else:
             self._ResetStatus()
-            # Canceling all 'after' callbacks...
+            self.lbl_status['text'] = str(self._stressTest.result())
+            # Canceling the elapsed 'after' callbacks...
             self.after_cancel(self._updateElapsedID)
     
     def _ResetStatus(self) -> None:
@@ -270,7 +346,11 @@ class HttpStressTestWin(tk.Tk):
         self.prgrs_status.config(value=0)
     
     def _CheckCanceling(self) -> None:
-        if self._testTask.cancelled():
+        if self._stressTest.cancelled():
+            if self._showProgID:
+                self.after_cancel(self._showProgID)
+            if self._updateElapsedID:
+                self.after_cancel(self._updateElapsedID)
             self._ResetStatus()
         else:
             self.after(
@@ -287,12 +367,11 @@ class HttpStressTestWin(tk.Tk):
 
 if __name__ == '__main__':
     # Creating the AsyncIO in a thread...
-    asyncioThrd = AsyncioThrd(name='asyncioThrd')
-    asyncioThrd.start()
+    HttpstressTest = HttpStressTest(name='HttpStressTest')
+    HttpstressTest.start()
 
     # Creating the GUI in the main thread..
     httpStressTestWin = HttpStressTestWin()
     httpStressTestWin.mainloop()
 
-    asyncioThrd.close()
-    m = 2
+    HttpstressTest.close()
