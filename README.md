@@ -1,2 +1,2 @@
-# dont-be-just-a-reader
+# a-bit-more-of-an-interest
  Python's examples on different stuff.
