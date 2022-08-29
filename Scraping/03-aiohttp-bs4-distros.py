@@ -1,25 +1,32 @@
-
+"""This python module reads the planned python events from
+https://python.org/events/python-events/. It uses aiohttp and asyncio
+modules to grab data from the Web. Analyzing performs with bs4
+(BeautifulSoup) in a subprocess (multiprocessing).
+"""
 
 import asyncio
 from asyncio import Future as AsyncFuture
 import sys
 from asyncio import AbstractEventLoop
-from concurrent.futures import CancelledError
+from concurrent.futures import CancelledError, wait
 from concurrent.futures import Future as ConFuture
 from concurrent.futures import ProcessPoolExecutor
-from threading import Thread
+from threading import Thread, Event
 from time import sleep
 
 from aiohttp import ClientSession
 import attrs
+from bs4 import BeautifulSoup
+from bs4.element import Tag
 from lxml import etree
+
+from megacodist.console import WaitPromptingThrd
 
 
 @attrs.define
-class EventInfo:
-    date = attrs.field(default='')
-    location = attrs.field(default='')
-    title = attrs.field(default='')
+class DistroRank:
+    rank: int = attrs.field(default=None)
+    name: str = attrs.field(default='')
 
 
 class AsyncioThrd(Thread):
@@ -76,17 +83,19 @@ class AsyncioThrd(Thread):
         self._running = False
         self.loop.call_soon_threadsafe(self.loop.stop)
     
-    def LoadPythonEvents(self) -> AsyncFuture[list[EventInfo]]:
+    def LoadDistroList(self) -> AsyncFuture[list[DistroRank]]:
         """Submits a coroutine to this asyncio event loop to load
         Python.org events page."""
         return asyncio.run_coroutine_threadsafe(
-            self._LoadPythonEvents(),
+            self._LoadDistroList(),
             self.loop)
 
-    async def _LoadPythonEvents(self) -> AsyncFuture[list[EventInfo]]:
-        PY_EVENTS_URL = r'https://www.python.org/events/python-events/'
+    async def _LoadDistroList(self) -> AsyncFuture[list[DistroRank]]:
+        PY_EVENTS_URL = r'https://distrowatch.com/'
         # Reading Python events page...
-        async with ClientSession() as self.session:
+        headers = {
+            'User-Agent': r'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
+        async with ClientSession(headers=headers) as self.session:
             async with self.session.get(PY_EVENTS_URL) as resp:
                 html = await resp.text()
         # Processing events...
@@ -94,56 +103,32 @@ class AsyncioThrd(Thread):
         # So it is awaitable
         return await self.loop.run_in_executor(
             self.prcPool,
-            _ProcessPythonEvents,
+            _FindDistroList,
             html)
     
 
-def _ProcessPythonEvents(html: str) -> list[EventInfo]:
-    events: list[EventInfo] = []
-    htmlParser = etree.HTMLParser()
-    dom: etree.ElementBase = etree.fromstring(html, htmlParser)
-    ulElem: etree.ElementBase = dom.xpath(
-        r'//*[@id="content"]/div/section/div/div/ul')
-    for eventElem in ulElem[0]:
-        try:
-            event = EventInfo()
-            if eventElem.tag == 'li':
-                event.title = eventElem[0][0].text
-                event.date = (
-                    eventElem[1][0].text
-                    + eventElem[1][0][0].text)
-                event.location = eventElem[1][1].text
-            events.append(event)
-        except Exception:
-            pass
-    return events
+def _FindDistroList(html: str) -> list[DistroRank]:
+    from lxml.etree import HTMLParser, fromstring, ElementBase
 
-
-def WaitUntilFuture(msg: str, future: AsyncFuture, nDots: int = 4) -> None:
-    maxMsgLen = len(msg) + nDots
-    while True:
-        print(end='\r', flush=True)
-        print(' ' * maxMsgLen, end='\r', flush=True)
-        print(msg, end='', flush=True)
-        for idx in range(nDots):
-            sleep(0.5)
-            if future.done():
-                break
-            print('.', end='', flush=True)
-        else:
-            continue
-        break
-    print(end='\r', flush=True)
-    print(' ' * maxMsgLen, end='\r', flush=True)
+    htmlParser = HTMLParser()
+    dom: ElementBase = fromstring(html, htmlParser)
+    rankings: list[ElementBase] = dom.xpath(
+        '//table[@class="News"]//tr[th[@class="phr1"] and td[@class="phr2"] and td[@class="phr3"]]')
+    for idx in range(len(rankings)):
+        distro = DistroRank()
+        distro.rank = int(rankings[idx].xpath('th[@class="phr1"]/text()')[0])
+        distro.name = rankings[idx].xpath('td[@class="phr2"]/a/text()')[0]
+        temp = rankings[idx]
+        rankings[idx] = distro
+        del temp
+    return rankings
 
 
 def PrintResult(future: AsyncFuture) -> None:
     try:
-        events: list[EventInfo] = future.result()
-        for event in events:
-            print(event.title.ljust(60, '='))
-            print(f'\t{event.date}')
-            print(f'\t{event.location}')
+        rankings: list[DistroRank] = future.result()
+        for rank in rankings:
+            print(f'{rank.rank}: {rank.name}')
     except CancelledError:
         print('Cancelled')
     except Exception as err:
@@ -152,12 +137,19 @@ def PrintResult(future: AsyncFuture) -> None:
 
 if __name__ == '__main__':
     prcPool = ProcessPoolExecutor()
+    doneEvent = Event()
+    waitingPrompt = WaitPromptingThrd(
+        doneEvent,
+        waitMsg='Looking up')
 
     asyncioThrd = AsyncioThrd(prcPool)
     asyncioThrd.StartAsyncioThrd()
 
-    future = asyncioThrd.LoadPythonEvents()
-    WaitUntilFuture('Loading', future)
+    waitingPrompt.start()
+    future = asyncioThrd.LoadDistroList()
+    wait([future])
+    doneEvent.set()
+    waitingPrompt.join()
     PrintResult(future)
 
     # Quitting the program...

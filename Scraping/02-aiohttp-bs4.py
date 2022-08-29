@@ -1,4 +1,8 @@
-
+"""This python module reads the planned python events from
+https://python.org/events/python-events/. It uses aiohttp and asyncio
+modules to grab data from the Web. Analyzing performs with bs4
+(BeautifulSoup) in a subprocess (multiprocessing).
+"""
 
 import asyncio
 from asyncio import Future as AsyncFuture
@@ -142,8 +146,8 @@ def PrintResult(future: AsyncFuture) -> None:
             print(f'\t{event.location}')
     except CancelledError:
         print('Cancelled')
-    '''except Exception as err:
-        print(f'An error occurred: {str(err)}')'''
+    except Exception as err:
+        print(f'An error occurred: {str(err)}')
 
 
 if __name__ == '__main__':
