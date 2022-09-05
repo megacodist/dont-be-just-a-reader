@@ -1,10 +1,15 @@
-"""Lists the podcasts in npr.org."""
+"""Reads information about planets of the solar system from
+https://www.encyclopedia.com and save them into a CSV file in the folder
+that this file lies.
+"""
 
 
 import asyncio
 from asyncio import AbstractEventLoop, CancelledError
 from asyncio import Future as AsyncFuture
 from concurrent.futures import ProcessPoolExecutor, wait
+import os
+from pathlib import Path
 from pprint import pprint
 import sys
 from threading import Event, Thread
@@ -13,13 +18,6 @@ from time import sleep
 from aiohttp import ClientSession
 import attrs
 from megacodist.console import WaitPromptingThrd
-
-
-@attrs.define
-class PodInfo:
-    title = attrs.field(default='')
-    url = attrs.field(default='')
-    category = attrs.field(default='')
 
 
 class AsyncioThrd(Thread):
@@ -76,58 +74,60 @@ class AsyncioThrd(Thread):
         self._running = False
         self.loop.call_soon_threadsafe(self.loop.stop)
     
-    def LoadNprPods(self) -> AsyncFuture[list[PodInfo]]:
+    def SavePlanetsInfo(self, csvFile: Path | str) -> AsyncFuture[None]:
         """Submits a coroutine to this asyncio event loop to load
         Python.org events page."""
         return asyncio.run_coroutine_threadsafe(
-            self._LoadNprPods(),
+            self._SavePlanetsInfo(csvFile),
             self.loop)
 
-    async def _LoadNprPods(self) -> AsyncFuture[list[PodInfo]]:
-        PY_EVENTS_URL = (
-            r'https://www.npr.org/podcasts/376087396/featured-npr-podcasts')
+    async def _SavePlanetsInfo(
+            self,
+            csvFile: Path | str
+            ) -> AsyncFuture[None]:
+        import platform
+
+        PLANETS_URL = (
+            r'https://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/major-planets-solar-system-table')
         # Reading Python events page...
-        async with ClientSession() as self.session:
-            async with self.session.get(PY_EVENTS_URL) as resp:
+        pltfrm = platform.system_alias(
+                platform.system(),
+                platform.release(),
+                platform.version())
+        headers = {
+            'User-Agent': (
+                'Mozilla/5.0, '
+                + f'({pltfrm}) '
+                + (
+                    '(compatible; planets-crawler; '
+                    + '+https://github.com/megacodist/a-bit-more-of-an-interest)'))}
+        async with ClientSession(headers=headers) as self.session:
+            async with self.session.get(PLANETS_URL) as resp:
                 html = await resp.text()
         # Processing events...
         # run_in_executor returns an asyncio.Future object
         # So it is awaitable
         return await self.loop.run_in_executor(
             self.prcPool,
-            _ProcessPods,
-            html)
+            _ProcessPlanets,
+            html,
+            csvFile)
 
 
-def _ProcessPods(html: str) ->list[PodInfo]:
-    from lxml.etree import fromstring, HTMLParser, _ElementTree, _Element
-    htmlParser = HTMLParser()
-    dom: _ElementTree = fromstring(html, htmlParser)
-    pods: list[_Element] = dom.xpath(
-        r'//section[contains(@class, "podcast-section")]/article[contains(@class, "item-podcast")]')
-    infos: list[PodInfo] = []
-    for pod in pods:
-        podInfo = PodInfo()
-        podInfo.title = pod.xpath(r'h1[@class="title"]/a/text()')[0]
-        podInfo.url = pod.xpath(r'h1[@class="title"]/a/@href')[0]
-        infos.append(podInfo)
-    return infos
+def _ProcessPlanets(html: str, csvFile: Path | str) -> None:
+    import csv
+    from lxml.etree import HTML, _ElementTree, _Element
 
-
-def PrintResult(future: AsyncFuture) -> None:
-    try:
-        infos: list[PodInfo] = future.result()
-        titleMaxWidth = max([len(pod.title) for pod in infos])
-        print(
-            'Title'.ljust(titleMaxWidth),
-            'URL')
-        print('=' * titleMaxWidth, '=' * 30)
-        for pod in infos:
-            print(f'{pod.title:<{titleMaxWidth}} {pod.url}')
-    except CancelledError:
-        print('Cancelled')
-    except Exception as err:
-        print(f'An error occurred: {str(err)}')
+    root: _Element = HTML(html)
+    trs: list[_Element] = root.xpath(
+        r'//div[contains(@class, "doccontentwrapper")]/table/tr')
+    nInfos = max(len(tr.xpath('td')) for tr in trs)
+    with open(csvFile, mode='wt', newline='') as csvFile:
+        writer = csv.writer(csvFile)
+        for tr in trs:
+            tds = tr.xpath('td/text()')
+            if len(tds) == nInfos:
+                writer.writerow(tds)
 
 
 if __name__ == '__main__':
@@ -140,12 +140,15 @@ if __name__ == '__main__':
     asyncioThrd = AsyncioThrd(prcPool)
     asyncioThrd.StartAsyncioThrd()
 
+    # Suggeesting CSV file name...
+    csvFile = Path(__file__).resolve().parent / 'planets.csv'
+
     waitingPrompt.start()
-    future = asyncioThrd.LoadNprPods()
+    future = asyncioThrd.SavePlanetsInfo(csvFile)
     wait([future])
     doneEvent.set()
     waitingPrompt.join()
-    PrintResult(future)
+    os.system(f'notepad.exe "{csvFile}"')
 
     # Quitting the program...
     asyncioThrd.close()

@@ -1,0 +1,9 @@
+ Planet, Distance from the sun(AU), Period of revolution, Period of rotation, Mass(earth=1), Diameter(earth=1), Number of confirmed satellites
+ Mercury, 0.39, 88 days, 59 days, 0.06, 0.38, 0
+ Venus, 0.72, 225 days, 243 days, 0.82, 0.95, 0
+ Earth, 1, 365 days, 24 hours, 1, 1, 1
+ Mars, 1.52, 687 days, 25 hours, 0.11, 0.53, 2
+ Jupiter, 5.20, 12 years, 10 hours, 317.89, 11.19, 63
+ Saturn, 9.54, 29 years, 10 hours, 95.15, 9.44, 61
+ Uranus, 19.2, 84 years, 18 hours, 14.54, 4.10, 27
+ Neptune, 30.06, 165 years, 18 hours, 17.23, 3.88, 14
