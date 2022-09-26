@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Project Author="Didaniha" CommentTableSortAscending="false" CommentTableSortColumn="Date Time" Description="&lt;html&gt;&#13;&#10;  &lt;head&gt;&#13;&#10;    &lt;style type=&quot;text/css&quot;&gt;&#10;      &lt;!--&#10;        body { color: #000000; font-family: Dialog; font-size: 12px }&#10;      --&gt;&#10;    &lt;/style&gt;&#13;&#10;    &#13;&#10;  &lt;/head&gt;&#13;&#10;  &lt;body&gt;&#13;&#10;  &lt;/body&gt;&#13;&#10;&lt;/html&gt;&#13;&#10;" DocumentationType="html" ExportedFromDifferentName="false" ExporterVersion="16.1.1" Name="test" TextualAnalysisHighlightOptionCaseSensitive="false" UmlVersion="2.x" Xml_structure="simple">
+	<ProjectInfo>
+		<OrmInfo DefaultDatabase="1" SupportDatabases="0"/>
+		<LogicalView/>
+		<ProjectOptions>
+			<DiagramOptions ActivityDiagramControlFlowDisplayOption="\u0000" ActivityDiagramShowActionCallBehaviorOption="\u0000" ActivityDiagramShowActivityEdgeWeight="true" ActivityDiagramShowObjectNodeType="true" ActivityDiagramShowPartitionHandle="\u0000" AddDataStoresExtEntitiesToDecomposedDFD="\u0002" AlignColumnProperties="true" AllowConfigShowInOutFlowButtonsInDataFlowDiagram="false" AutoGenerateRoleName="false" AutoSetAttributeType="true" AutoSetColumnType="true" AutoSyncRoleName="true" BpdAutoStretchPools="true" BpdConnectGatewayWithFlowObjectInDifferentPool="\u0000" BpdDefaultConnectionPointStyle="\u0001" BpdDefaultConnectorStyle="\u0005" BpdDhowIdOption="\u0000" BpdShowActivitiesTypeIcon="true" BusinessProcessDiagramDefaultLanguage="English" ClassVisibilityStyle="\u0001" ConnectorLabelOrientation="\u0000" CreateOneMessagePerDirection="true" DecisionMergeNodeConnectionPointStyle="\u0000" DefaultAssociationEndNavigable="\u0001" DefaultAssociationEndVisibility="\u0000" DefaultAssociationShowFromMultiplicity="true" DefaultAssociationShowFromRoleName="true" DefaultAssociationShowFromRoleVisibility="true" DefaultAssociationShowStereotypes="true" DefaultAssociationShowToMultiplicity="true" DefaultAssociationShowToRoleName="true" DefaultAssociationShowToRoleVisibility="true" DefaultAttributeMultiplicity="false" DefaultAttributeType="" DefaultAttributeVisibility="\u0001" DefaultClassAttributeMultiplicity="" DefaultClassAttributeMultiplicityOrdered="false" DefaultClassAttributeMultiplicityUnique="true" DefaultClassInterfaceBall="false" DefaultClassVisibility="\u0004" DefaultColumnType="integer(10)" DefaultConnectionPointStyle="\u0000" DefaultConnectorStyle="\u0001" DefaultDiagramBackground="rgb(255, 255, 255)" DefaultDisplayAsRobustnessAnalysisIcon="true" DefaultDisplayAsRobustnessAnalysisIconInSequenceDiagram="true" DefaultDisplayAsStereotypeIcon="false" DefaultFontColor="rgb(0, 0, 0)" DefaultGenDiagramTypeFromScenario="\u0000" DefaultHtmlDocFontColor="rgb(0, 0, 0)" DefaultLineJumps="\u0000" DefaultOperationVisibility="\u0004" DefaultParameterDirection="\u0002" DefaultShowAttributeInitialValue="true" DefaultShowAttributeOption="\u0001" DefaultShowClassMemberStereotype="true" DefaultShowDirection="false" DefaultShowMultiplicityConstraints="false" DefaultShowOperationOption="\u0001" DefaultShowOperationSignature="true" DefaultShowOrderedMultiplicityConstraint="true" DefaultShowOwnedAssociationEndAsAttribute="true" DefaultShowOwner="false" DefaultShowOwnerSkipModelInFullyQualifiedOwnerSignature="true" DefaultShowReceptionOption="\u0001" DefaultShowTemplateParameter="true" DefaultShowTypeOption="\u0001" DefaultShowUniqueMultiplicityConstraint="true" DefaultTypeOfSubProcess="\u0000" DefaultWrapClassMember="false" DrawTextAnnotationOpenRectangleFollowConnectorEnd="true" EnableMinimumSize="true" EntityColumnConstraintsPresentation="\u0002" ErdIndexNumOfDigits="-1" ErdIndexPattern="{table_name}" ErdIndexPatternSyncAutomatically="true" ErdManyToManyJoinTableDelimiter="_" EtlTableDiagramFontSize="14" ExpandedSubProcessDiagramContent="\u0001" ForeignKeyArrowHeadSize="\u0002" ForeignKeyConnectorEndPointAssociatedColumn="false" ForeignKeyNamePattern="{reference_table_name}{reference_column_name}" ForeignKeyNamePatternCaseHandling="0" ForeignKeyRelationshipPattern="{association_name}" FractionalMetrics="true" GeneralizationSetNotation="\u0001" GraphicAntiAliasing="true" GridDiagramFontSize="14" LineJumpSize="\u0000" ModelElementNameAlignment="\u0004" MultipleLineClassName="\u0001" PaintConnectorThroughLabel="false" PointConnectorEndToCompartmentMember="true" PrimaryKeyConstraintPattern="" PrimaryKeyNamePattern="ID" RenameConstructorAfterRenameClass="\u0000" RenameExtensionPointToFollowExtendUseCase="\u0000" ShapeAutoFitSize="false" ShowActivationsInSequenceDiagram="true" ShowActivityStateNodeCaption="524287" ShowArtifactOption="\u0002" ShowAssociatedDiagramNameOfInteraction="false" ShowAssociationRoleStereotypes="true" ShowAttributeGetterSetter="false" ShowBSElementCode="true" ShowClassEmptyCompartments="false" ShowColumnDefaultValue="false" ShowColumnNullable="true" ShowColumnType="true" ShowColumnUniqueConstraintName="false" ShowColumnUserType="false" ShowComponentOption="\u0002" ShowExtraColumnProperties="true" ShowInOutFlowButtonsInDataFlowDiagram="false" ShowInOutFlowsInSubLevelDiagram="true" ShowMessageOperationSignatureForSequenceAndCommunicationDiagram="true" ShowMessageStereotypeInSequenceAndCommunicationDiagram="true" ShowNumberInCollaborationDiagram="true" ShowNumberInSequenceDiagram="true" ShowPackageNameStyle="\u0000" ShowParameterNameInOperationSignature="true" ShowRowGridLineWithinCompClassDiagram="false" ShowRowGridLineWithinCompERD="true" ShowRowGridLineWithinORMDiagram="true" ShowSchemaNameInERD="true" ShowTransitionTrigger="\u0000" ShowUseCaseExtensionPoint="true" ShowUseCaseID="false" SnapConnectorsAfterZoom="false" StateShowParametersOfInternalActivities="false" StateShowPrePostConditionAndBodyOfInternalActivities="true" StopTargetLifelineOnCreateDestroyMessage="\u0002" SupportHtmlTaggedValue="false" SupportMultipleLineAttribute="true" SuppressImpliedMultiplicityForAttributeAssociationEnd="false" SyncAssociationNameWithAssociationClass="\u0000" SyncAssociationRoleNameWithReferencedAttributeName="true" SyncDocOfInterfaceToSubClass="\u0000" TextAntiAliasing="true" TextualAnalysisGenerateRequirementTextOption="\u0001" TextualAnalysisHighlightOption="\u0000" UnnamedIndexPattern="{table_name}_{column_name}" UseStateNameTab="false" WireflowDiagramDevice="0" WireflowDiagramShowActiveFlowLabel="true" WireflowDiagramTheme="0" WireflowDiagramWireflowShowPreview="true" WireflowDiagramWireflowShowScreenId="true">
+				<DefaultHtmlDocFont Family="Dialog" Size="12" Style="0"/>
+			</DiagramOptions>
+			<GeneralOptions ConfirmSubLevelIdWithDot="true" QuickAddGlossaryTermParentModelId="default"/>
+			<InstantReverseOptions CalculateGeneralizationAndRealization="false" CreateShapeForParentModelOfDraggedClassPackage="false" ReverseGetterSetter="\u0000" ReverseOperationImplementation="false" ShowPackageForNewDiagram="\u0001" ShowPackageOwner="\u0000"/>
+			<ModelQualityOptions EnableModelQualityChecking="false"/>
+			<ORMOptions DecimalPrecision="19" DecimalScale="0" ExportCommentToDatabase="true" FormattedSQL="false" GenerateAssociationWithAttribute="false" GenerateDiagramFromORMWizards="true" GetterSetterVisibility="\u0000" IdGeneratorType="native" MappingFileColumnOrder="\u0000" NumericToClassType="\u0000" QuoteSQLIdentifier="\u0000" RecreateShapeWhenSync="false" SyncToClassDiagramAttributeName="\u0001" SyncToClassDiagramAttributeNamePrefix="" SyncToClassDiagramAttributeNameSuffix="" SyncToClassDiagramClassName="\u0000" SyncToClassDiagramClassNamePrefix="" SyncToClassDiagramClassNameSuffix="" SyncToERDColumnName="\u0000" SyncToERDColumnNamePrefix="" SyncToERDColumnNameSuffix="" SyncToERDTableName="\u0004" SyncToERDTableNamePrefix="" SyncToERDTableNameSuffix="" SynchronizeDefaultValueToColumn="false" SynchronizeName="\u0002" TablePerSubclassFKMapping="\u0000" UpperCaseSQL="true" UseDefaultDecimal="true" WrappingServletRequest="\u0001"/>
+			<RequirementDiagramOptions DefaultWrapMember="true" ShowAttributes="\u0001" SupportHTMLAttribute="false"/>
+			<StateCodeEngineOptions AutoCreateInitialStateInStateDiagram="true" AutoCreateTransitionMethods="true" DefaultInitialStateLocationX="-1" DefaultInitialStateLocationY="-1" GenerateDebugMessage="false" GenerateSample="true" GenerateTryCatch="true" Language="\u0000" RegenerateTransitionMethods="false" SyncTransitionMethods="true"/>
+			<WarningOptions CreateORMClassInDefaultPackage="true"/>
+			<PORepository>
+				<POUserIDFormats>
+					<POUserIDFormat Digits="2" Guid="false" Id="UQRWKsGGAqACBgkL" LastNumericValue="0" ModelType="BPMNElement" Prefix="BP" Suffix=""/>
+					<POUserIDFormat Digits="2" Guid="false" Id="0QRWKsGGAqACBgkM" LastNumericValue="0" ModelType="Actor" Prefix="AC" Suffix=""/>
+					<POUserIDFormat Digits="2" Guid="false" Id="MQRWKsGGAqACBgkN" LastNumericValue="0" ModelType="UseCase" Prefix="UC" Suffix=""/>
+					<POUserIDFormat Digits="3" Guid="false" Id="MQRWKsGGAqACBgkO" LastNumericValue="0" ModelType="Requirement" Prefix="REQ" Suffix=""/>
+					<POUserIDFormat Digits="3" Guid="false" Id="MQRWKsGGAqACBgkP" LastNumericValue="0" ModelType="BusinessRule" Prefix="BR" Suffix=""/>
+					<POUserIDFormat Digits="-1" Guid="false" Id="MQRWKsGGAqACBgkQ" LastNumericValue="0" ModelType="BusinessProcessDiagram" Prefix="" Suffix=""/>
+				</POUserIDFormats>
+			</PORepository>
+		</ProjectOptions>
+	</ProjectInfo>
+	<Models>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="SNhWKsGGAqACBgWW" Name="boolean" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.442" PmLastModified="2022-09-19T10:53:15.096" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="KNhWKsGGAqACBgWX" Name="byte" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.444" PmLastModified="2022-09-19T10:53:15.208" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="qNhWKsGGAqACBgWY" Name="char" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.445" PmLastModified="2022-09-19T10:53:15.170" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="qNhWKsGGAqACBgWZ" Name="double" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.445" PmLastModified="2022-09-19T10:53:15.170" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="aNhWKsGGAqACBgWa" Name="float" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.446" PmLastModified="2022-09-19T10:53:15.129" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="6NhWKsGGAqACBgWb" Name="int" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.447" PmLastModified="2022-09-19T10:53:15.220" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="GNhWKsGGAqACBgWc" Name="long" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.448" PmLastModified="2022-09-19T10:53:15.194" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="GNhWKsGGAqACBgWd" Name="short" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.449" PmLastModified="2022-09-19T10:53:15.194" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="mNhWKsGGAqACBgWe" Name="void" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.449" PmLastModified="2022-09-19T10:53:15.160" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<DataType BacklogActivityId="0" Documentation_plain="" Id="WNhWKsGGAqACBgWf" Name="string" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:53:03.450" PmLastModified="2022-09-19T10:53:15.116" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<ModelRelationshipContainer BacklogActivityId="0" Documentation_plain="" Id="hsbRzsGGAqACAgd." Name="relationships" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T10:57:38.337" PmLastModified="2022-09-25T19:36:36.136" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true">
+			<ModelChildren>
+				<ModelRelationshipContainer BacklogActivityId="0" Documentation_plain="" Id="7MFmrsGGAqACBgnF" Name="Realization" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:36:36.087" PmLastModified="2022-09-25T19:38:46.403" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true">
+					<ModelChildren>
+						<Realization BacklogActivityId="0" ConnectToCodeModel="1" Documentation_plain="" From="r7hqrsGGAqACBgjx" Id="MSWmrsGGAqACBgmb" Mapping_IsNull="true" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:35:39.084" PmLastModified="2022-09-25T19:38:46.417" QualityReason_IsNull="true" QualityScore="-1" To="yk5GrsGGAqACBglZ" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified"/>
+						<Realization BacklogActivityId="0" ConnectToCodeModel="1" Documentation_plain="" From="xV5KrsGGAqACBgiM" Id="3xRmrsGGAqACBgmv" Mapping_IsNull="true" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:36:12.987" PmLastModified="2022-09-25T19:36:36.122" QualityReason_IsNull="true" QualityScore="-1" To="TH9GrsGGAqACBglz" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified">
+							<MasterView>
+								<Realization Idref="gpRmrsGGAqACBgmw"/>
+							</MasterView>
+						</Realization>
+						<Realization BacklogActivityId="0" ConnectToCodeModel="1" Documentation_plain="" From="xV5KrsGGAqACBgiM" Id="T.pmrsGGAqACBgm4" Mapping_IsNull="true" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:36:25.010" PmLastModified="2022-09-25T19:36:36.123" QualityReason_IsNull="true" QualityScore="-1" To="iCLGrsGGAqACBgl8" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified">
+							<MasterView>
+								<Realization Idref="nBpmrsGGAqACBgm5"/>
+							</MasterView>
+						</Realization>
+						<Realization BacklogActivityId="0" ConnectToCodeModel="1" Documentation_plain="" From="xV5KrsGGAqACBgiM" Id="H.vmrsGGAqACBgnp" Mapping_IsNull="true" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:38:03.320" PmLastModified="2022-09-25T19:38:46.412" QualityReason_IsNull="true" QualityScore="-1" To="egtGrsGGAqACBglq" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified">
+							<MasterView>
+								<Realization Idref="mhvmrsGGAqACBgnq"/>
+							</MasterView>
+						</Realization>
+						<Realization BacklogActivityId="0" ConnectToCodeModel="1" Documentation_plain="" From="xV5KrsGGAqACBgiM" Id="yzfmrsGGAqACBgnt" Mapping_IsNull="true" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:38:08.659" PmLastModified="2022-09-25T19:38:46.416" QualityReason_IsNull="true" QualityScore="-1" To="yk5GrsGGAqACBglZ" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified">
+							<MasterView>
+								<Realization Idref="pLfmrsGGAqACBgnu"/>
+							</MasterView>
+						</Realization>
+					</ModelChildren>
+				</ModelRelationshipContainer>
+				<ModelRelationshipContainer BacklogActivityId="0" Documentation_plain="" Id="RsbRzsGGAqACAgd_" Name="Association" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T10:57:38.338" PmLastModified="2022-09-25T19:32:26.408" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true">
+					<ModelChildren>
+						<Association Abstract="false" BacklogActivityId="0" Derived="false" Direction="From To" Documentation_plain="" EndRelationshipFromMetaModelElement="xV5KrsGGAqACBgiM" EndRelationshipToMetaModelElement="3TUKrsGGAqACBge6" Id="z8IqrsGGAqACBgjB" Leaf="false" OrderingInProfile="-1" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:16:40.243" PmLastModified="2022-09-25T19:32:26.395" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified">
+							<FromEnd>
+								<AssociationEnd AggregationKind="Shared" BacklogActivityId="0" ConnectToCodeModel="1" DefaultValue_IsNull="true" Derived="false" DerivedUnion="false" Documentation_plain="" EndModelElement="xV5KrsGGAqACBgiM" Id="z8IqrsGGAqACBgjC" JavaCodeAttributeName="" Leaf="false" Multiplicity="Unspecified" Navigable="Navigable" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:16:40.243" PmLastModified_IsNull="true" ProvidePropertyGetterMethod="false" ProvidePropertySetterMethod="false" QualityReason_IsNull="true" QualityScore="-1" ReadOnly="false" Static="false" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified">
+									<Qualifier>
+										<Qualifier BacklogActivityId="0" Documentation_plain="" Id="z8IqrsGGAqACBgjD" Name="" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:16:40.243" PmLastModified_IsNull="true" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+									</Qualifier>
+									<Type>
+										<Class Idref="xV5KrsGGAqACBgiM" Name="INotifierNode"/>
+									</Type>
+								</AssociationEnd>
+							</FromEnd>
+							<ToEnd>
+								<AssociationEnd AggregationKind="None" BacklogActivityId="0" ConnectToCodeModel="1" DefaultValue_IsNull="true" Derived="false" DerivedUnion="false" Documentation_plain="" EndModelElement="3TUKrsGGAqACBge6" Id="z8IqrsGGAqACBgjE" JavaCodeAttributeName="" Leaf="false" Multiplicity="Unspecified" Navigable="Navigable" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:16:40.243" PmLastModified_IsNull="true" ProvidePropertyGetterMethod="false" ProvidePropertySetterMethod="false" QualityReason_IsNull="true" QualityScore="-1" ReadOnly="false" Static="false" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified">
+									<Qualifier>
+										<Qualifier BacklogActivityId="0" Documentation_plain="" Id="z8IqrsGGAqACBgjF" Name="" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:16:40.243" PmLastModified_IsNull="true" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+									</Qualifier>
+									<Type>
+										<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+									</Type>
+								</AssociationEnd>
+							</ToEnd>
+							<MasterView>
+								<Association Idref="bCIqrsGGAqACBgjG"/>
+							</MasterView>
+						</Association>
+					</ModelChildren>
+				</ModelRelationshipContainer>
+				<ModelRelationshipContainer BacklogActivityId="0" Documentation_plain="" Id="JsbRzsGGAqACAgeA" Name="Generalization" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T10:57:38.340" PmLastModified="2022-09-25T19:32:26.406" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true">
+					<ModelChildren>
+						<Generalization BacklogActivityId="0" ConnectToCodeModel="1" Documentation_plain="" From="3TUKrsGGAqACBge6" Id="z0_KrsGGAqACBgix" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:16:19.507" PmLastModified="2022-09-25T19:32:26.392" QualityReason_IsNull="true" QualityScore="-1" Substitutable="false" To="xV5KrsGGAqACBgiM" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="Unspecified">
+							<MasterView>
+								<Generalization Idref="3M_KrsGGAqACBgiy"/>
+							</MasterView>
+						</Generalization>
+					</ModelChildren>
+				</ModelRelationshipContainer>
+				<ModelRelationshipContainer BacklogActivityId="0" Documentation_plain="" Id="JFx5zsGGAqACAggj" Name="Anchor" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T11:18:12.964" PmLastModified="2022-09-25T19:32:26.405" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true">
+					<ModelChildren>
+						<Anchor BacklogActivityId="0" Documentation_plain="" From="wdnqrsGGAqACBgki" Id="nV4arsGGAqACBgkt" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:21:16.409" PmLastModified="2022-09-25T19:32:26.401" QualityReason_IsNull="true" QualityScore="-1" To="r7hqrsGGAqACBgjx" UserIDLastNumericValue="0" UserID_IsNull="true">
+							<MasterView>
+								<Anchor Idref="qN4arsGGAqACBgku"/>
+							</MasterView>
+						</Anchor>
+					</ModelChildren>
+				</ModelRelationshipContainer>
+			</ModelChildren>
+		</ModelRelationshipContainer>
+		<Stereotype Abstract="false" BacklogActivityId="0" BaseType="Class" Documentation_plain="" IconPath="" Id="lLUKrsGGAqACBge7" Leaf="false" Name="Interface" PmAuthor="Didaniha" PmCreateDateTime="2022-09-19T10:52:00.028" PmLastModified="2022-09-25T19:13:09.344" QualityReason_IsNull="true" QualityScore="-1" Root="false" UserIDLastNumericValue="0" UserID_IsNull="true"/>
+		<Package Abstract="false" BacklogActivityId="0" ConnectToCodeModel="1" DefaultDiagramId_IsNull="true" Documentation_plain="" Id="myZGrsGGAqACBglU" Leaf="false" Name="decorator" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:32:06.169" PmLastModified="2022-09-25T19:33:51.944" QualityReason_IsNull="true" QualityScore="-1" Root="false" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public">
+			<SubDiagrams>
+				<ClassDiagram Idref="BKXyrsGGAqACBgeV"/>
+			</SubDiagrams>
+			<ModelChildren>
+				<Class Abstract="false" Active="false" BacklogActivityId="0" BusinessKeyMutable="true" BusinessModel="false" ConnectToCodeModel="1" Documentation_plain="" Id="3TUKrsGGAqACBge6" Leaf="false" Name="INotifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:12:44.923" PmLastModified="2022-09-25T19:57:49.176" QualityReason_IsNull="true" QualityScore="-1" Root="false" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public">
+					<Stereotypes>
+						<Stereotype Idref="lLUKrsGGAqACBge7" Name="Interface"/>
+					</Stereotypes>
+					<ModelChildren>
+						<Operation Abstract="true" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="wWGKrsGGAqACBgfF" Leaf="false" Lower_IsNull="true" Name="send" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:13:40.675" PmLastModified="2022-09-25T19:31:25.077" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="7j.KrsGGAqACBgh_" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:14:10.872" PmLastModified="2022-09-25T19:14:53.348" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="true" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="G8aersGGAqACBgsW" Leaf="false" Lower_IsNull="true" Name="trigger" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:57:13.244" PmLastModified="2022-09-25T19:57:49.197" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="O8aersGGAqACBgsX" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:57:13.247" PmLastModified="2022-09-25T19:57:29.097" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+					</ModelChildren>
+					<FromSimpleRelationships>
+						<Generalization Idref="z0_KrsGGAqACBgix" Name=""/>
+					</FromSimpleRelationships>
+					<MasterView>
+						<Class Idref="NTUKrsGGAqACBge5" Name="INotifier"/>
+					</MasterView>
+				</Class>
+				<Class Abstract="false" Active="false" BacklogActivityId="0" BusinessKeyMutable="true" BusinessModel="false" ConnectToCodeModel="1" Documentation_plain="" Id="xV5KrsGGAqACBgiM" Leaf="false" Name="INotifierNode" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:14:43.171" PmLastModified="2022-09-25T19:38:46.412" QualityReason_IsNull="true" QualityScore="-1" Root="false" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public">
+					<Stereotypes>
+						<Stereotype Idref="lLUKrsGGAqACBge7" Name="Interface"/>
+					</Stereotypes>
+					<ModelChildren>
+						<Attribute Abstract="false" Aggregation="None" AllowEmptyName="false" BacklogActivityId="0" ConnectToCodeModel="1" Derived="false" DerivedUnion="false" Documentation_plain="" HasGetter="false" HasSetter="false" Id="ldNKrsGGAqACBgiW" IsID="false" Leaf="false" Multiplicity="Unspecified" Name="prev" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:15:03.913" PmLastModified="2022-09-25T19:32:26.401" QualityReason_IsNull="true" QualityScore="-1" ReadOnly="false" Scope="instance" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="private" Visible="true">
+							<Type>
+								<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+							</Type>
+						</Attribute>
+						<Operation Abstract="true" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="370qrsGGAqACBgjU" Leaf="false" Lower_IsNull="true" Name="send" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:17:11.487" PmLastModified="2022-09-25T19:31:25.083" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="_70qrsGGAqACBgjV" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:17:11.490" PmLastModified="2022-09-25T19:17:21.585" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="r7hqrsGGAqACBgjx" Leaf="false" Lower_IsNull="true" Name="trigger" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:18:41.589" PmLastModified="2022-09-25T19:38:46.417" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="5TNqrsGGAqACBgkJ" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:19:26.311" PmLastModified="2022-09-25T19:20:00.342" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+							<FromSimpleRelationships>
+								<Realization Idref="MSWmrsGGAqACBgmb" Name=""/>
+							</FromSimpleRelationships>
+							<ToSimpleRelationships>
+								<Anchor Idref="nV4arsGGAqACBgkt" Name=""/>
+							</ToSimpleRelationships>
+						</Operation>
+					</ModelChildren>
+					<FromSimpleRelationships>
+						<Realization Idref="3xRmrsGGAqACBgmv" Name=""/>
+						<Realization Idref="T.pmrsGGAqACBgm4" Name=""/>
+						<Realization Idref="H.vmrsGGAqACBgnp" Name=""/>
+						<Realization Idref="yzfmrsGGAqACBgnt" Name=""/>
+					</FromSimpleRelationships>
+					<ToSimpleRelationships>
+						<Generalization Idref="z0_KrsGGAqACBgix" Name=""/>
+					</ToSimpleRelationships>
+					<MasterView>
+						<Class Idref="xV5KrsGGAqACBgiL" Name="INotifierNode"/>
+					</MasterView>
+				</Class>
+				<NOTE BacklogActivityId="0" Documentation="&lt;head&gt;&#13;&#10;    &lt;style type=&quot;text/css&quot;&gt;&#10;      &lt;!--&#10;        body { color: #000000; font-family: Dialog; font-size: 12px }&#10;      --&gt;&#10;    &lt;/style&gt;&#13;&#10;    &#13;&#10;  &lt;/head&gt;&#13;&#10;  &lt;body&gt;&#13;&#10;    &lt;p&gt;&#13;&#10;      this.send(msg)&#13;&#10;    &lt;/p&gt;&#13;&#10;    &lt;p&gt;&#13;&#10;      IF this.prev IS NOT NULL THEN&#13;&#10;    &lt;/p&gt;&#13;&#10;    &lt;p&gt;&#13;&#10;      &amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;this.prev.send(msg)&#13;&#10;    &lt;/p&gt;&#13;&#10;    &lt;p&gt;&#13;&#10;      ENDIF&#13;&#10;    &lt;/p&gt;&#13;&#10;  &lt;/body&gt;" Documentation_plain="this.send(msg)&#10;IF this.prev IS NOT NULL THEN&#10;        this.prev.send(msg)&#10;ENDIF" Id="wdnqrsGGAqACBgki" Name="" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:20:19.267" PmLastModified="2022-09-25T19:32:26.404" QualityReason_IsNull="true" QualityScore="-1" UserIDLastNumericValue="0" UserID_IsNull="true">
+					<FromSimpleRelationships>
+						<Anchor Idref="nV4arsGGAqACBgkt" Name=""/>
+					</FromSimpleRelationships>
+					<MasterView>
+						<NOTE Idref="wdnqrsGGAqACBgkh" Name=""/>
+					</MasterView>
+				</NOTE>
+				<Class Abstract="false" Active="false" BacklogActivityId="0" BusinessKeyMutable="true" BusinessModel="false" ConnectToCodeModel="1" Documentation_plain="" Id="yk5GrsGGAqACBglZ" Leaf="false" Name="EmailNotifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:32:09.619" PmLastModified="2022-09-25T19:44:20.063" QualityReason_IsNull="true" QualityScore="-1" Root="false" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public">
+					<ModelChildren>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="N8vWrsGGAqACBgpd" Leaf="false" Lower_IsNull="true" Name="EmailNotifier" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:42:24.428" PmLastModified="2022-09-25T19:43:25.428" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" DefaultValue="null" Direction="in" Documentation_plain="" Id="BoQ2rsGGAqACBgpp" Multiplicity="Unspecified" Name="notifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:42:44.256" PmLastModified="2022-09-25T19:43:25.428" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="aW.WrsGGAqACBgoL" Leaf="false" Lower_IsNull="true" Name="send" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:22.233" PmLastModified="2022-09-25T19:41:49.401" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="mW.WrsGGAqACBgoM" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:22.236" PmLastModified="2022-09-25T19:40:32.360" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="eW.WrsGGAqACBgoN" Leaf="false" Lower_IsNull="true" Name="trigger" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:22.240" PmLastModified="2022-09-25T19:40:32.360" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="BW.WrsGGAqACBgoO" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:22.243" PmLastModified="2022-09-25T19:40:32.360" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Attribute Abstract="false" Aggregation="None" AllowEmptyName="false" BacklogActivityId="0" ConnectToCodeModel="1" Derived="false" DerivedUnion="false" Documentation_plain="" HasGetter="false" HasSetter="false" Id="CW.WrsGGAqACBgoK" IsID="false" Leaf="false" Multiplicity="Unspecified" Name="prev" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:22.228" PmLastModified="2022-09-25T19:40:32.360" QualityReason_IsNull="true" QualityScore="-1" ReadOnly="false" Scope="instance" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="private" Visible="true">
+							<Type>
+								<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+							</Type>
+						</Attribute>
+					</ModelChildren>
+					<ToSimpleRelationships>
+						<Realization Idref="MSWmrsGGAqACBgmb" Name=""/>
+						<Realization Idref="yzfmrsGGAqACBgnt" Name=""/>
+					</ToSimpleRelationships>
+					<MasterView>
+						<Class Idref="yk5GrsGGAqACBglY" Name="EmailNotifier"/>
+					</MasterView>
+				</Class>
+				<Class Abstract="false" Active="false" BacklogActivityId="0" BusinessKeyMutable="true" BusinessModel="false" ConnectToCodeModel="1" Documentation_plain="" Id="egtGrsGGAqACBglq" Leaf="false" Name="SmsNotifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:32:33.694" PmLastModified="2022-09-25T19:46:49.238" QualityReason_IsNull="true" QualityScore="-1" Root="false" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public">
+					<ModelChildren>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="7fW2rsGGAqACBgqN" Leaf="false" Lower_IsNull="true" Name="SmsNotifier" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:44:26.231" PmLastModified="2022-09-25T19:45:39.185" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" DefaultValue="null" Direction="in" Documentation_plain="" Id="81.2rsGGAqACBgqZ" Multiplicity="Unspecified" Name="notifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:44:45.455" PmLastModified="2022-09-25T19:45:39.185" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="s65WrsGGAqACBgoZ" Leaf="false" Lower_IsNull="true" Name="send" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:54.800" PmLastModified="2022-09-25T19:41:49.383" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="C65WrsGGAqACBgoa" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:54.804" PmLastModified="2022-09-25T19:41:04.922" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="a65WrsGGAqACBgob" Leaf="false" Lower_IsNull="true" Name="trigger" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:54.809" PmLastModified="2022-09-25T19:41:04.922" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="m65WrsGGAqACBgoc" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:54.813" PmLastModified="2022-09-25T19:41:04.922" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Attribute Abstract="false" Aggregation="None" AllowEmptyName="false" BacklogActivityId="0" ConnectToCodeModel="1" Derived="false" DerivedUnion="false" Documentation_plain="" HasGetter="false" HasSetter="false" Id="E65WrsGGAqACBgoY" IsID="false" Leaf="false" Multiplicity="Unspecified" Name="prev" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:54.795" PmLastModified="2022-09-25T19:41:04.922" QualityReason_IsNull="true" QualityScore="-1" ReadOnly="false" Scope="instance" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="private" Visible="true">
+							<Type>
+								<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+							</Type>
+						</Attribute>
+					</ModelChildren>
+					<ToSimpleRelationships>
+						<Realization Idref="H.vmrsGGAqACBgnp" Name=""/>
+					</ToSimpleRelationships>
+					<MasterView>
+						<Class Idref="egtGrsGGAqACBglp" Name="SmsNotifier"/>
+					</MasterView>
+				</Class>
+				<Class Abstract="false" Active="false" BacklogActivityId="0" BusinessKeyMutable="true" BusinessModel="false" ConnectToCodeModel="1" Documentation_plain="" Id="TH9GrsGGAqACBglz" Leaf="false" Name="VoiceNotifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:32:45.426" PmLastModified="2022-09-25T19:46:49.243" QualityReason_IsNull="true" QualityScore="-1" Root="false" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public">
+					<ModelChildren>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="LsV2rsGGAqACBgqx" Leaf="false" Lower_IsNull="true" Name="VoiceNotifier" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:45:28.628" PmLastModified="2022-09-25T19:46:49.243" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" DefaultValue="null" Direction="in" Documentation_plain="" Id="9_t2rsGGAqACBgq2" Multiplicity="Unspecified" Name="notifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:45:44.111" PmLastModified="2022-09-25T19:46:49.243" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="PnNWrsGGAqACBgoo" Leaf="false" Lower_IsNull="true" Name="send" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:41:17.505" PmLastModified="2022-09-25T19:41:49.395" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="QXNWrsGGAqACBgop" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:41:17.508" PmLastModified="2022-09-25T19:41:49.395" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="YXNWrsGGAqACBgoq" Leaf="false" Lower_IsNull="true" Name="trigger" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:41:17.513" PmLastModified="2022-09-25T19:41:49.395" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="kXNWrsGGAqACBgor" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:41:17.515" PmLastModified="2022-09-25T19:41:49.395" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Attribute Abstract="false" Aggregation="None" AllowEmptyName="false" BacklogActivityId="0" ConnectToCodeModel="1" Derived="false" DerivedUnion="false" Documentation_plain="" HasGetter="false" HasSetter="false" Id="7nNWrsGGAqACBgon" IsID="false" Leaf="false" Multiplicity="Unspecified" Name="prev" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:41:17.498" PmLastModified="2022-09-25T19:41:49.395" QualityReason_IsNull="true" QualityScore="-1" ReadOnly="false" Scope="instance" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="private" Visible="true">
+							<Type>
+								<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+							</Type>
+						</Attribute>
+					</ModelChildren>
+					<ToSimpleRelationships>
+						<Realization Idref="3xRmrsGGAqACBgmv" Name=""/>
+					</ToSimpleRelationships>
+					<MasterView>
+						<Class Idref="jH9GrsGGAqACBgly" Name="VoiceNotifier"/>
+					</MasterView>
+				</Class>
+				<Class Abstract="false" Active="false" BacklogActivityId="0" BusinessKeyMutable="true" BusinessModel="false" ConnectToCodeModel="1" Documentation_plain="" Id="iCLGrsGGAqACBgl8" Leaf="false" Name="SlackNotifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:33:03.313" PmLastModified="2022-09-25T20:01:24.762" QualityReason_IsNull="true" QualityScore="-1" Root="false" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public">
+					<ModelChildren>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="lX_2rsGGAqACBgrd" Leaf="false" Lower_IsNull="true" Name="SlackNotifier" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:46:57.513" PmLastModified="2022-09-25T19:47:58.118" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" DefaultValue="null" Direction="in" Documentation_plain="" Id=".KwOrsGGAqACBgri" Multiplicity="Unspecified" Name="notifier" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:47:11.455" PmLastModified="2022-09-25T19:47:58.118" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="JYJWrsGGAqACBgoS" Leaf="false" Lower_IsNull="true" Name="send" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:41.448" PmLastModified="2022-09-25T19:41:49.399" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="FYJWrsGGAqACBgoT" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:41.450" PmLastModified="2022-09-25T19:40:51.573" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Operation Abstract="false" BacklogActivityId="0" BodyCondition_IsNull="true" ConnectToCodeModel="1" Documentation_plain="" Id="NYJWrsGGAqACBgoU" Leaf="false" Lower_IsNull="true" Name="trigger" Ordered="false" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:41.455" PmLastModified="2022-09-25T19:40:51.573" QualityReason_IsNull="true" QualityScore="-1" Query="false" ReturnTypeDocumentation_plain="" Scope="instance" Static="false" TypeModifier="" Unique="true" Upper_IsNull="true" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="public" Visible="true">
+							<ReturnType>
+								<DataType Idref="mNhWKsGGAqACBgWe" Name="void"/>
+							</ReturnType>
+							<ModelChildren>
+								<Parameter BacklogActivityId="0" Direction="in" Documentation_plain="" Id="9YJWrsGGAqACBgoV" Multiplicity="Unspecified" Name="msg" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:41.458" PmLastModified="2022-09-25T19:40:51.573" QualityReason_IsNull="true" QualityScore="-1" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true">
+									<Type>
+										<DataType Idref="WNhWKsGGAqACBgWf" Name="string"/>
+									</Type>
+								</Parameter>
+							</ModelChildren>
+						</Operation>
+						<Attribute Abstract="false" Aggregation="None" AllowEmptyName="false" BacklogActivityId="0" ConnectToCodeModel="1" Derived="false" DerivedUnion="false" Documentation_plain="" HasGetter="false" HasSetter="false" Id="GYJWrsGGAqACBgoR" IsID="false" Leaf="false" Multiplicity="Unspecified" Name="prev" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:40:41.442" PmLastModified="2022-09-25T19:40:51.572" QualityReason_IsNull="true" QualityScore="-1" ReadOnly="false" Scope="instance" TypeModifier="" UserIDLastNumericValue="0" UserID_IsNull="true" Visibility="private" Visible="true">
+							<Type>
+								<Class Idref="3TUKrsGGAqACBge6" Name="INotifier"/>
+							</Type>
+						</Attribute>
+					</ModelChildren>
+					<ToSimpleRelationships>
+						<Realization Idref="T.pmrsGGAqACBgm4" Name=""/>
+					</ToSimpleRelationships>
+					<MasterView>
+						<Class Idref="iCLGrsGGAqACBgl7" Name="SlackNotifier"/>
+					</MasterView>
+				</Class>
+			</ModelChildren>
+		</Package>
+	</Models>
+	<Diagrams>
+		<ClassDiagram AlignToGrid="false" AutoFitShapesSize="false" ClassFitSizeWhenShowHideMember="true" ConnectionPointStyle="0" ConnectorLabelOrientation="0" ConnectorLineJumps="0" ConnectorLineJumpsSize="0" ConnectorModelElementNameAlignment="4" ConnectorStyle="1" DiagramBackground="rgb(255, 255, 255)" Editable="true" FollowDiagramParentElement="true" GeneralizationSetNotation="2" GridColor="rgb(192, 192, 192)" GridHeight="10" GridVisible="false" GridWidth="10" Height="885" HideConnectorIfFromToIsHidden="0" HideEmptyTaggedValues="false" Id="BKXyrsGGAqACBgeV" ImageHeight="0" ImageScale="1.0" ImageWidth="0" InitializeDiagramForCreate="true" Maximized="true" ModelElementNameAlignment="4" Name="Decorator" PaintConnectorThroughLabel="1" ParentModel="myZGrsGGAqACBglU" PmAuthor="Didaniha" PmCreateDateTime="2022-09-25T19:11:37.440" PmLastModified="2022-09-25T19:57:13.280" PointConnectorEndToCompartmentMember="true" QualityScore="-1" RequestFitSizeWithPromptUser="false" RequestValidateSnapToGrid="false" ShapePresentationOption="0" ShowActivityStateNodeCaption="524287" ShowAllocatedFrom="true" ShowAllocatedTo="true" ShowAssociationNavigationArrows="3" ShowAttributeGetterSetter="false" ShowAttributesCodeDetails="2" ShowAttributesPropertyModifiers="2" ShowAttributesType="1" ShowClassEmptyCompartments="2" ShowClassOwner="2" ShowClassReferencedAttributes="true" ShowColorLegend="false" ShowConnectorLegend="false" ShowConnectorName="0" ShowConstraints="false" ShowDefaultPackage="true" ShowEllipsisForUnshownClassMembers="2" ShowInformationItemOption="2" ShowOperationsCodeDetails="2" ShowOperationsParameters="1" ShowOperationsReturnType="1" ShowPMAuthor="false" ShowPMDifficulty="false" ShowPMDiscipline="false" ShowPMIteration="false" ShowPMPhase="false" ShowPMPriority="false" ShowPMStatus="false" ShowPMVersion="false" ShowPackageNameStyle="0" ShowPackageOwner="2" ShowParametersCodeDetails="2" ShowShapeLegend="false" ShowShapeStereotypeIconName="true" ShowStereotypes="true" ShowTaggedValues="false" ShowTemplateInfoOfGeneralizationAndRealization="false" SuppressImplied1MultiplicityForAttributeAndAssociationEnd="false" TeamworkCreateDateTime="0" TrimmedHeight="0" TrimmedWidth="0" Width="1620" X="0" Y="0" ZoomRatio="1.0" _globalPaletteOption="true">
+			<Shapes>
+				<Class AttributeSortType="0" Background="rgb(122, 207, 245)" ConnectToPoint="true" ConnectionPointType="2" CoverConnector="false" DisplayAsRobustnessAnalysisIcon="true" EnumerationLiteralSortType="0" Foreground="rgb(0, 0, 0)" Height="68" Id="NTUKrsGGAqACBge5" InterfaceBall="false" KShDrOp="false" KSwCsMbSt="true" LShCmMl="false" LshRfAts="0" MShDrAt="false" MSwTpPts="true" MetaModelElement="3TUKrsGGAqACBge6" Model="3TUKrsGGAqACBge6" ModelElementNameAlignment="9" Name="INotifier" OperationSortType="0" OverrideAppearanceWithStereotypeIcon="true" ParentConnectorDTheta="0.0" ParentConnectorHeaderLength="40" ParentConnectorLineLength="10" PresentationOption="4" PrimitiveShapeType="0" ReceptionSortType="0" RequestDefaultSize="false" RequestFitSize="false" RequestFitSizeFromCenter="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" RequestSetSizeOption="0" Selectable="true" ShowAllocatedFrom="0" ShowAllocatedTo="0" ShowAttributeType="1" ShowAttributesCodeDetails="0" ShowAttributesPropertyModifiers="0" ShowAttributesType="0" ShowClassMemberConstraints="true" ShowEllipsisForUnshownMembers="0" ShowEmptyCompartments="0" ShowEnumerationLiteralType="1" ShowInitialAttributeValue="true" ShowOperationParameterDirection="false" ShowOperationProperties="false" ShowOperationRaisedExceptions="false" ShowOperationSignature="true" ShowOperationTemplateParameters="false" ShowOperationType="1" ShowOperationsCodeDetails="0" ShowOperationsParameters="0" ShowOperationsReturnType="0" ShowOwnerOption="3" ShowParameterNameInOperationSignature="true" ShowParametersCodeDetails="0" ShowReceptionType="1" ShowStereotypeIconName="0" ShowTypeOption="0" SuppressImplied1MultiplicityForAttribute="0" VisibilityStyle="1" Width="138" WpMbs="false" X="500" Y="120" ZOrder="14">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="30" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="FreeMove" Visible="true" Width="138" X="0" Y="0"/>
+					<FillColor Color="rgb(122, 207, 245)" Style="1" Transparency="0" Type="1"/>
+					<CompartmentFont Value="none"/>
+				</Class>
+				<Class AttributeSortType="0" Background="rgb(122, 207, 245)" ConnectToPoint="true" ConnectionPointType="2" CoverConnector="false" DisplayAsRobustnessAnalysisIcon="true" EnumerationLiteralSortType="0" Foreground="rgb(0, 0, 0)" Height="87" Id="xV5KrsGGAqACBgiL" InterfaceBall="false" KShDrOp="false" KSwCsMbSt="true" LShCmMl="false" LshRfAts="0" MShDrAt="false" MSwTpPts="true" MetaModelElement="xV5KrsGGAqACBgiM" Model="xV5KrsGGAqACBgiM" ModelElementNameAlignment="9" Name="INotifierNode" OperationSortType="0" OverrideAppearanceWithStereotypeIcon="true" ParentConnectorDTheta="0.0" ParentConnectorHeaderLength="40" ParentConnectorLineLength="10" PresentationOption="4" PrimitiveShapeType="0" ReceptionSortType="0" RequestDefaultSize="false" RequestFitSize="false" RequestFitSizeFromCenter="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" RequestSetSizeOption="0" Selectable="true" ShowAllocatedFrom="0" ShowAllocatedTo="0" ShowAttributeType="1" ShowAttributesCodeDetails="0" ShowAttributesPropertyModifiers="0" ShowAttributesType="0" ShowClassMemberConstraints="true" ShowEllipsisForUnshownMembers="0" ShowEmptyCompartments="0" ShowEnumerationLiteralType="1" ShowInitialAttributeValue="true" ShowOperationParameterDirection="false" ShowOperationProperties="false" ShowOperationRaisedExceptions="false" ShowOperationSignature="true" ShowOperationTemplateParameters="false" ShowOperationType="1" ShowOperationsCodeDetails="0" ShowOperationsParameters="0" ShowOperationsReturnType="0" ShowOwnerOption="3" ShowParameterNameInOperationSignature="true" ShowParametersCodeDetails="0" ShowReceptionType="1" ShowStereotypeIconName="0" ShowTypeOption="0" SuppressImplied1MultiplicityForAttribute="0" VisibilityStyle="1" Width="138" WpMbs="false" X="496" Y="247" ZOrder="12">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="30" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="FreeMove" Visible="true" Width="138" X="0" Y="0"/>
+					<FillColor Color="rgb(122, 207, 245)" Style="1" Transparency="0" Type="1"/>
+					<CompartmentFont Value="none"/>
+				</Class>
+				<NOTE Angle="0" Background="rgb(122, 207, 245)" ConnectToPoint="true" ConnectionPointType="2" CoverConnector="false" CreatorDiagramType="ClassDiagram" Foreground="rgb(0, 0, 0)" Height="85" Id="wdnqrsGGAqACBgkh" MetaModelElement="wdnqrsGGAqACBgki" Model="wdnqrsGGAqACBgki" ModelElementNameAlignment="9" Name="" OverrideAppearanceWithStereotypeIcon="true" ParentConnectorDTheta="0.0" ParentConnectorHeaderLength="40" ParentConnectorLineLength="10" PresentationOption="4" PrimitiveShapeType="0" RequestDefaultSize="false" RequestFitSize="false" RequestFitSizeFromCenter="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" RequestSetSizeOption="0" Selectable="true" ShowAllocatedFrom="0" ShowAllocatedTo="0" ShowStereotypeIconName="0" Width="194" X="790" Y="286" ZOrder="10">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="12" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="0" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="FreeMove" Visible="true" Width="179" X="0" Y="0"/>
+					<FillColor Color="rgb(122, 207, 245)" Style="1" Transparency="0" Type="1"/>
+				</NOTE>
+				<Class AttributeSortType="0" Background="rgb(122, 207, 245)" ConnectToPoint="true" ConnectionPointType="2" CoverConnector="false" CreatorDiagramType="ClassDiagram" DisplayAsRobustnessAnalysisIcon="true" EnumerationLiteralSortType="0" Foreground="rgb(0, 0, 0)" Height="87" Id="yk5GrsGGAqACBglY" InterfaceBall="false" KShDrOp="false" KSwCsMbSt="true" LShCmMl="false" LshRfAts="0" MShDrAt="false" MSwTpPts="true" MetaModelElement="yk5GrsGGAqACBglZ" Model="yk5GrsGGAqACBglZ" ModelElementNameAlignment="9" Name="EmailNotifier" OperationSortType="0" OverrideAppearanceWithStereotypeIcon="true" ParentConnectorDTheta="0.0" ParentConnectorHeaderLength="40" ParentConnectorLineLength="10" PresentationOption="4" PrimitiveShapeType="0" ReceptionSortType="0" RequestDefaultSize="false" RequestFitSize="false" RequestFitSizeFromCenter="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" RequestSetSizeOption="0" Selectable="true" ShowAllocatedFrom="0" ShowAllocatedTo="0" ShowAttributeType="1" ShowAttributesCodeDetails="0" ShowAttributesPropertyModifiers="0" ShowAttributesType="0" ShowClassMemberConstraints="true" ShowEllipsisForUnshownMembers="0" ShowEmptyCompartments="0" ShowEnumerationLiteralType="1" ShowInitialAttributeValue="true" ShowOperationParameterDirection="false" ShowOperationProperties="false" ShowOperationRaisedExceptions="false" ShowOperationSignature="true" ShowOperationTemplateParameters="false" ShowOperationType="1" ShowOperationsCodeDetails="0" ShowOperationsParameters="0" ShowOperationsReturnType="0" ShowOwnerOption="3" ShowParameterNameInOperationSignature="true" ShowParametersCodeDetails="0" ShowReceptionType="1" ShowStereotypeIconName="0" ShowTypeOption="0" SuppressImplied1MultiplicityForAttribute="0" VisibilityStyle="1" Width="222" WpMbs="false" X="82" Y="449" ZOrder="8">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="15" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="FreeMove" Visible="true" Width="222" X="0" Y="0"/>
+					<FillColor Color="rgb(122, 207, 245)" Style="1" Transparency="0" Type="1"/>
+					<CompartmentFont Value="none"/>
+				</Class>
+				<Class AttributeSortType="0" Background="rgb(122, 207, 245)" ConnectToPoint="true" ConnectionPointType="2" CoverConnector="false" CreatorDiagramType="ClassDiagram" DisplayAsRobustnessAnalysisIcon="true" EnumerationLiteralSortType="0" Foreground="rgb(0, 0, 0)" Height="87" Id="egtGrsGGAqACBglp" InterfaceBall="false" KShDrOp="false" KSwCsMbSt="true" LShCmMl="false" LshRfAts="0" MShDrAt="false" MSwTpPts="true" MetaModelElement="egtGrsGGAqACBglq" Model="egtGrsGGAqACBglq" ModelElementNameAlignment="9" Name="SmsNotifier" OperationSortType="0" OverrideAppearanceWithStereotypeIcon="true" ParentConnectorDTheta="0.0" ParentConnectorHeaderLength="40" ParentConnectorLineLength="10" PresentationOption="4" PrimitiveShapeType="0" ReceptionSortType="0" RequestDefaultSize="false" RequestFitSize="false" RequestFitSizeFromCenter="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" RequestSetSizeOption="0" Selectable="true" ShowAllocatedFrom="0" ShowAllocatedTo="0" ShowAttributeType="1" ShowAttributesCodeDetails="0" ShowAttributesPropertyModifiers="0" ShowAttributesType="0" ShowClassMemberConstraints="true" ShowEllipsisForUnshownMembers="0" ShowEmptyCompartments="0" ShowEnumerationLiteralType="1" ShowInitialAttributeValue="true" ShowOperationParameterDirection="false" ShowOperationProperties="false" ShowOperationRaisedExceptions="false" ShowOperationSignature="true" ShowOperationTemplateParameters="false" ShowOperationType="1" ShowOperationsCodeDetails="0" ShowOperationsParameters="0" ShowOperationsReturnType="0" ShowOwnerOption="3" ShowParameterNameInOperationSignature="true" ShowParametersCodeDetails="0" ShowReceptionType="1" ShowStereotypeIconName="0" ShowTypeOption="0" SuppressImplied1MultiplicityForAttribute="0" VisibilityStyle="1" Width="217" WpMbs="false" X="359" Y="449" ZOrder="6">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="15" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="FreeMove" Visible="true" Width="217" X="0" Y="0"/>
+					<FillColor Color="rgb(122, 207, 245)" Style="1" Transparency="0" Type="1"/>
+					<CompartmentFont Value="none"/>
+				</Class>
+				<Class AttributeSortType="0" Background="rgb(122, 207, 245)" ConnectToPoint="true" ConnectionPointType="2" CoverConnector="false" CreatorDiagramType="ClassDiagram" DisplayAsRobustnessAnalysisIcon="true" EnumerationLiteralSortType="0" Foreground="rgb(0, 0, 0)" Height="87" Id="jH9GrsGGAqACBgly" InterfaceBall="false" KShDrOp="false" KSwCsMbSt="true" LShCmMl="false" LshRfAts="0" MShDrAt="false" MSwTpPts="true" MetaModelElement="TH9GrsGGAqACBglz" Model="TH9GrsGGAqACBglz" ModelElementNameAlignment="9" Name="VoiceNotifier" OperationSortType="0" OverrideAppearanceWithStereotypeIcon="true" ParentConnectorDTheta="0.0" ParentConnectorHeaderLength="40" ParentConnectorLineLength="10" PresentationOption="4" PrimitiveShapeType="0" ReceptionSortType="0" RequestDefaultSize="false" RequestFitSize="false" RequestFitSizeFromCenter="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" RequestSetSizeOption="0" Selectable="true" ShowAllocatedFrom="0" ShowAllocatedTo="0" ShowAttributeType="1" ShowAttributesCodeDetails="0" ShowAttributesPropertyModifiers="0" ShowAttributesType="0" ShowClassMemberConstraints="true" ShowEllipsisForUnshownMembers="0" ShowEmptyCompartments="0" ShowEnumerationLiteralType="1" ShowInitialAttributeValue="true" ShowOperationParameterDirection="false" ShowOperationProperties="false" ShowOperationRaisedExceptions="false" ShowOperationSignature="true" ShowOperationTemplateParameters="false" ShowOperationType="1" ShowOperationsCodeDetails="0" ShowOperationsParameters="0" ShowOperationsReturnType="0" ShowOwnerOption="3" ShowParameterNameInOperationSignature="true" ShowParametersCodeDetails="0" ShowReceptionType="1" ShowStereotypeIconName="0" ShowTypeOption="0" SuppressImplied1MultiplicityForAttribute="0" VisibilityStyle="1" Width="222" WpMbs="false" X="631" Y="449" ZOrder="4">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="15" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="FreeMove" Visible="true" Width="222" X="0" Y="0"/>
+					<FillColor Color="rgb(122, 207, 245)" Style="1" Transparency="0" Type="1"/>
+					<CompartmentFont Value="none"/>
+				</Class>
+				<Class AttributeSortType="0" Background="rgb(122, 207, 245)" ConnectToPoint="true" ConnectionPointType="2" CoverConnector="false" CreatorDiagramType="ClassDiagram" DisplayAsRobustnessAnalysisIcon="true" EnumerationLiteralSortType="0" Foreground="rgb(0, 0, 0)" Height="87" Id="iCLGrsGGAqACBgl7" InterfaceBall="false" KShDrOp="false" KSwCsMbSt="true" LShCmMl="false" LshRfAts="0" MShDrAt="false" MSwTpPts="true" MetaModelElement="iCLGrsGGAqACBgl8" Model="iCLGrsGGAqACBgl8" ModelElementNameAlignment="9" Name="SlackNotifier" OperationSortType="0" OverrideAppearanceWithStereotypeIcon="true" ParentConnectorDTheta="0.0" ParentConnectorHeaderLength="40" ParentConnectorLineLength="10" PresentationOption="4" PrimitiveShapeType="0" ReceptionSortType="0" RequestDefaultSize="false" RequestFitSize="false" RequestFitSizeFromCenter="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" RequestSetSizeOption="0" Selectable="true" ShowAllocatedFrom="0" ShowAllocatedTo="0" ShowAttributeType="1" ShowAttributesCodeDetails="0" ShowAttributesPropertyModifiers="0" ShowAttributesType="0" ShowClassMemberConstraints="true" ShowEllipsisForUnshownMembers="0" ShowEmptyCompartments="0" ShowEnumerationLiteralType="1" ShowInitialAttributeValue="true" ShowOperationParameterDirection="false" ShowOperationProperties="false" ShowOperationRaisedExceptions="false" ShowOperationSignature="true" ShowOperationTemplateParameters="false" ShowOperationType="1" ShowOperationsCodeDetails="0" ShowOperationsParameters="0" ShowOperationsReturnType="0" ShowOwnerOption="3" ShowParameterNameInOperationSignature="true" ShowParametersCodeDetails="0" ShowReceptionType="1" ShowStereotypeIconName="0" ShowTypeOption="0" SuppressImplied1MultiplicityForAttribute="0" VisibilityStyle="1" Width="222" WpMbs="false" X="908" Y="449" ZOrder="2">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="15" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="FreeMove" Visible="true" Width="222" X="0" Y="0"/>
+					<FillColor Color="rgb(122, 207, 245)" Style="1" Transparency="0" Type="1"/>
+					<CompartmentFont Value="none"/>
+				</Class>
+			</Shapes>
+			<Connectors>
+				<Generalization Background="rgb(255, 255, 255)" ConnectorLabelOrientation="4" ConnectorLineJumps="4" ConnectorStyle="Follow Diagram" CreatorDiagramType="ClassDiagram" Foreground="rgb(0, 0, 0)" From="NTUKrsGGAqACBge5" FromConnectType="0" FromPinType="1" FromShapeXDiff="0" FromShapeYDiff="0" Height="157" Id="3M_KrsGGAqACBgiy" MetaModelElement="z0_KrsGGAqACBgix" Model="z0_KrsGGAqACBgix" ModelElementNameAlignment="9" PaintThroughLabel="2" RequestRebuild="false" RequestRebuildFromEnd="false" RequestRebuildToEnd="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" Selectable="true" ShowConnectorName="2" To="xV5KrsGGAqACBgiL" ToConnectType="0" ToPinType="1" ToShapeXDiff="0" ToShapeYDiff="0" UseFromShapeCenter="true" UseToShapeCenter="true" Width="100" X="498" Y="139" ZOrder="16">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="0" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="None" Visible="true" Width="20" X="549" Y="217"/>
+					<Points>
+						<Point X="548.0" Y="189.0"/>
+						<Point X="548.0" Y="246.0"/>
+					</Points>
+				</Generalization>
+				<Association AssociationEndPropertyStringsAInternalHeight="-2147483648" AssociationEndPropertyStringsAInternalWidth="-2147483648" AssociationEndPropertyStringsBInternalHeight="-2147483648" AssociationEndPropertyStringsBInternalWidth="-2147483648" Background="rgb(122, 207, 245)" ConnectorLabelOrientation="4" ConnectorLineJumps="4" ConnectorStyle="Follow Diagram" CreatorDiagramType="ClassDiagram" Foreground="rgb(0, 0, 0)" From="xV5KrsGGAqACBgiL" FromConnectType="0" FromMultiplicityInternalHeight="-2147483648" FromMultiplicityInternalWidth="-2147483648" FromPinType="1" FromRoleInternalHeight="-2147483648" FromRoleInternalWidth="-2147483648" FromShapeXDiff="0" FromShapeYDiff="0" HasAssociationEndPropertyStringsAShape="false" HasAssociationEndPropertyStringsBShape="false" HasMultiplicityAShape="false" HasMultiplicityBShape="false" HasRoleAShape="false" HasRoleBShape="false" Height="157" Id="bCIqrsGGAqACBgjG" MetaModelElement="z8IqrsGGAqACBgjB" Model="z8IqrsGGAqACBgjB" ModelElementNameAlignment="9" PaintThroughLabel="2" RequestRebuild="false" RequestRebuildFromEnd="false" RequestRebuildToEnd="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" Selectable="true" ShowAssociationEndPropertyStrings="false" ShowConnectorName="2" ShowDirection="false" ShowFromMultiplicity="true" ShowFromRoleName="true" ShowFromRoleVisibility="true" ShowMultiplicityConstraints="false" ShowNavigationArrows="0" ShowOrderedMultiplicityConstraint="true" ShowStereotypes="true" ShowToMultiplicity="true" ShowToRoleName="true" ShowToRoleVisibility="true" ShowUniqueMultiplicityConstraint="true" SuppressImplied1MultiplicityForAssociationEnd="0" To="NTUKrsGGAqACBge5" ToConnectType="0" ToMultiplicityInternalHeight="-2147483648" ToMultiplicityInternalWidth="-2147483648" ToPinType="1" ToRoleInternalHeight="-2147483648" ToRoleInternalWidth="-2147483648" ToShapeXDiff="0" ToShapeYDiff="0" UseFromShapeCenter="true" UseToShapeCenter="true" Width="100" X="529" Y="139" ZOrder="18">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="0" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="None" Visible="true" Width="20" X="580" Y="217"/>
+					<Points>
+						<Point X="579.0" Y="246.0"/>
+						<Point X="579.0" Y="189.0"/>
+					</Points>
+				</Association>
+				<Anchor Background="rgb(122, 207, 245)" ConnectorLabelOrientation="4" ConnectorLineJumps="4" ConnectorStyle="Follow Diagram" CreatorDiagramType="ClassDiagram" Foreground="rgb(0, 0, 0)" From="wdnqrsGGAqACBgkh" FromConnectType="0" FromPinType="1" FromShapeXDiff="0" FromShapeYDiff="0" Height="100" Id="qN4arsGGAqACBgku" MetaModelElement="nV4arsGGAqACBgkt" Model="nV4arsGGAqACBgkt" ModelElementNameAlignment="9" PaintThroughLabel="2" RequestRebuild="false" RequestRebuildFromEnd="false" RequestRebuildToEnd="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" Selectable="true" ShowConnectorName="2" To="xV5KrsGGAqACBgiL" ToConnectType="0" ToMemberId="r7hqrsGGAqACBgjx" ToPinType="1" ToShapeXDiff="0" ToShapeYDiff="0" UseFromShapeCenter="true" UseToShapeCenter="true" Width="255" X="584" Y="269" ZOrder="20">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="0" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="None" Visible="true" Width="20" X="637" Y="319"/>
+					<Points>
+						<Point X="789.0" Y="319.0"/>
+						<Point X="634.0" Y="319.0"/>
+					</Points>
+				</Anchor>
+				<Realization Background="rgb(122, 207, 245)" ConnectorLabelOrientation="4" ConnectorLineJumps="4" ConnectorStyle="Follow Diagram" CreatorDiagramType="ClassDiagram" Foreground="rgb(0, 0, 0)" From="xV5KrsGGAqACBgiL" FromConnectType="0" FromPinType="1" FromShapeXDiff="0" FromShapeYDiff="0" Height="213" Id="gpRmrsGGAqACBgmw" MetaModelElement="3xRmrsGGAqACBgmv" Model="3xRmrsGGAqACBgmv" ModelElementNameAlignment="9" PaintThroughLabel="2" RequestRebuild="false" RequestRebuildFromEnd="false" RequestRebuildToEnd="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" Selectable="true" ShowConnectorName="2" To="jH9GrsGGAqACBgly" ToConnectType="0" ToPinType="1" ToShapeXDiff="0" ToShapeYDiff="0" UseFromShapeCenter="true" UseToShapeCenter="true" Width="263" X="529" Y="285" ZOrder="22">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="0" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="None" Visible="true" Width="20" X="638" Y="415"/>
+					<Points>
+						<Point X="579.0" Y="335.0"/>
+						<Point X="579.0" Y="415.0"/>
+						<Point X="742.0" Y="415.0"/>
+						<Point X="742.0" Y="448.0"/>
+					</Points>
+				</Realization>
+				<Realization Background="rgb(122, 207, 245)" ConnectorLabelOrientation="4" ConnectorLineJumps="4" ConnectorStyle="Follow Diagram" CreatorDiagramType="ClassDiagram" Foreground="rgb(0, 0, 0)" From="xV5KrsGGAqACBgiL" FromConnectType="0" FromPinType="1" FromShapeXDiff="0" FromShapeYDiff="0" Height="213" Id="nBpmrsGGAqACBgm5" MetaModelElement="T.pmrsGGAqACBgm4" Model="T.pmrsGGAqACBgm4" ModelElementNameAlignment="9" PaintThroughLabel="2" RequestRebuild="false" RequestRebuildFromEnd="false" RequestRebuildToEnd="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" Selectable="true" ShowConnectorName="2" To="iCLGrsGGAqACBgl7" ToConnectType="0" ToPinType="1" ToShapeXDiff="0" ToShapeYDiff="0" UseFromShapeCenter="true" UseToShapeCenter="true" Width="540" X="529" Y="285" ZOrder="24">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="0" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="None" Visible="true" Width="20" X="767" Y="411"/>
+					<Points>
+						<Point X="579.0" Y="335.0"/>
+						<Point X="579.0" Y="415.0"/>
+						<Point X="1019.0" Y="415.0"/>
+						<Point X="1019.0" Y="448.0"/>
+					</Points>
+				</Realization>
+				<Realization Background="rgb(122, 207, 245)" ConnectorLabelOrientation="4" ConnectorLineJumps="4" ConnectorStyle="Follow Diagram" CreatorDiagramType="ClassDiagram" Foreground="rgb(0, 0, 0)" From="xV5KrsGGAqACBgiL" FromConnectType="0" FromPinType="1" FromShapeXDiff="0" FromShapeYDiff="0" Height="213" Id="mhvmrsGGAqACBgnq" MetaModelElement="H.vmrsGGAqACBgnp" Model="H.vmrsGGAqACBgnp" ModelElementNameAlignment="9" PaintThroughLabel="2" RequestRebuild="false" RequestRebuildFromEnd="false" RequestRebuildToEnd="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" Selectable="true" ShowConnectorName="2" To="egtGrsGGAqACBglp" ToConnectType="0" ToPinType="1" ToShapeXDiff="0" ToShapeYDiff="0" UseFromShapeCenter="true" UseToShapeCenter="true" Width="223" X="406" Y="285" ZOrder="26">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="0" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="None" Visible="true" Width="20" X="542" Y="415"/>
+					<Points>
+						<Point X="579.0" Y="335.0"/>
+						<Point X="579.0" Y="415.0"/>
+						<Point X="456.0" Y="415.0"/>
+						<Point X="456.0" Y="448.0"/>
+					</Points>
+				</Realization>
+				<Realization Background="rgb(122, 207, 245)" ConnectorLabelOrientation="4" ConnectorLineJumps="4" ConnectorStyle="Follow Diagram" CreatorDiagramType="ClassDiagram" Foreground="rgb(0, 0, 0)" From="xV5KrsGGAqACBgiL" FromConnectType="0" FromPinType="1" FromShapeXDiff="0" FromShapeYDiff="0" Height="213" Id="pLfmrsGGAqACBgnu" MetaModelElement="yzfmrsGGAqACBgnt" Model="yzfmrsGGAqACBgnt" ModelElementNameAlignment="9" PaintThroughLabel="2" RequestRebuild="false" RequestRebuildFromEnd="false" RequestRebuildToEnd="false" RequestResetCaption="false" RequestResetCaptionFitWidth="false" RequestResetCaptionSize="false" Selectable="true" ShowConnectorName="2" To="yk5GrsGGAqACBglY" ToConnectType="0" ToPinType="1" ToShapeXDiff="0" ToShapeYDiff="0" UseFromShapeCenter="true" UseToShapeCenter="true" Width="485" X="144" Y="285" ZOrder="28">
+					<ElementFont Color="rgb(0, 0, 0)" Name="Dialog" Size="11" Style="0"/>
+					<Line Cap="0" Color="rgb(0, 0, 0)" Transparency="0" Weight="1.0">
+						<Stroke/>
+					</Line>
+					<Caption Height="0" InternalHeight="-2147483648" InternalWidth="-2147483648" Side="None" Visible="true" Width="20" X="418" Y="411"/>
+					<Points>
+						<Point X="579.0" Y="335.0"/>
+						<Point X="579.0" Y="415.0"/>
+						<Point X="194.0" Y="415.0"/>
+						<Point X="194.0" Y="448.0"/>
+					</Points>
+				</Realization>
+			</Connectors>
+		</ClassDiagram>
+	</Diagrams>
+</Project>
